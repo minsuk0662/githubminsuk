@@ -24,5 +24,7 @@ int main(void)
     float quotient = (float)num1 / num2;
     printf("나눗셈 결과: %.2f\n", quotient); // 결과를 소수점 두 자리까지 출력
 
+    print("hello")
+
     return 0;
 }
