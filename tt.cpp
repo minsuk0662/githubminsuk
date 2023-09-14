@@ -1,30 +1,26 @@
 #include <stdio.h>
 
-int main(void) 
-{
+int main() {
     int num1, num2;
-    printf("두 개의 정수를 입력하세요: ");
-
+    
     // 사용자로부터 두 개의 정수 입력 받기
-    scanf_s("%d %d", &num1, &num2);
+    printf("첫 번째 정수를 입력하세요: ");
+    scanf("%d", &num1);
+    printf("두 번째 정수를 입력하세요: ");
+    scanf("%d", &num2);
+    
+    // 덧셈, 뺄셈, 곱셈, 나눗셈 결과 계산 및 출력
+    printf("덧셈 결과: %d + %d = %d\n", num1, num2, num1 + num2);
+    printf("뺄셈 결과: %d - %d = %d\n", num1, num2, num1 - num2);
+    printf("곱셈 결과: %d * %d = %d\n", num1, num2, num1 * num2);
 
-    // 덧셈 연산
-    int sum = num1 + num2;
-    printf("덧셈 결과: %d\n", sum);
-
-    // 뺄셈 연산
-    int difference = num1 - num2;
-    printf("뺄셈 결과: %d\n", difference);
-
-    // 곱셈 연산
-    int product = num1 * num2;
-    printf("곱셈 결과: %d\n", product);
-
-    // 나눗셈 연산 (실수 결과를 얻기 위해 형변환)
-    float quotient = (float)num1 / num2;
-    printf("나눗셈 결과: %.2f\n", quotient); // 결과를 소수점 두 자리까지 출력
-
-    print("hello")
+    if (num2 != 0) {
+        // 두 번째 숫자가 0이 아닌 경우에만 나눗셈 수행
+        double divisionResult = (double)num1 / num2;
+        printf("나눗셈 결과: %d / %d = %.2lf\n", num1, num2, divisionResult);
+    } else {
+        printf("0으로 나눌 수 없습니다.\n");
+    }
 
     return 0;
 }
